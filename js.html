@@ -1,0 +1,356 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Conceptos</title>
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.7.0/css/reveal.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.7.0/css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.7.0/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                <section>
+                    <section><h1>JAVASCRIPT</h1></section>
+                    <section data-markdown>
+						<h2>Cadenas de texto</h2>
+						<p>Se utilizan comillas simples o dobles para definir una cadena de texto</p>
+						<script type="text/template">
+							```
+							"cadena de texto"
+							'cadena de texto'
+						```
+					</script>
+					</section>
+                    <section data-markdown>
+						<h3>length y substring</h3>
+						<p>Se usa el atributo length para medir el número de caracteres, contando los espacios</p>
+						<p>Se usa la funcion substring para recortar la cadena según posicion inicial y final</p>
+						<script type="text/template">
+							```
+							"cadena de texto".length // 15
+							'cadena de texto'.substring(<inicio>,<fin>) //
+							```
+						</script>
+					</section>
+					<section>
+						<h3>Comentarios</h3>
+						<p>// comentarios de línea</p>
+						<p>/* multili */</p>
+					</section>
+                    <section>
+						<h3>Operaciones matemáticas básicas</h3>
+						<p>Resuelve primero (), luego * /, al final + -</p>
+					</section>
+                    <section data-markdown>
+						<h3>Interaccion usario confirm, prompt, console.log</h3>
+						<script type="text/template">
+							```
+							confirm("cadena de texto") // Pregunta si acepta o cancela con botones
+							prompt('cadena de texto') // Prompt responde con una casilla de texto
+							console.log("mensaje en pantalla")
+							```
+						</script>
+					</section>
+                    <section>
+						<h3>Comparadores &gt; &lt; === </h3>
+						<p>La diferencia entre == y === es que uno compara por tipo de dato (Número/Booleano/Texto)</p>
+					</section>
+					<section data-markdown>
+						<h3>Decisiones if else</h3>
+						<script type="text/template">
+							```
+							if (<condicion>) {
+								console.log("condicion verdadera");
+							} else {
+								console.log("condicion negativa")
+							}
+							```
+						</script>
+					</section>
+					<section>
+						<h3>Otras operaciones matemáticas</h3>
+						<ul>
+							<li>modulo: '%' => el residuo de la division entre el primer y el segundo  parametro</li>
+							<li>modulo: '++' => incrementa en 1 el valor</li>
+							<li>modulo: '--' => decrementa en 1 el valor</li>
+							<li>modulo: '+= num' => incrementa en num el valor</li>
+							<li>modulo: '-= num' => decrementa en num el valor</li>
+						</ul>
+					</section>
+					<section>condiciones con valores 0 null undefined y ""</section>
+				</section>
+				<section>
+					<section><h2>VARIABLES</h2></section>
+					<section data-markdown>
+						<h3>Definicion</h3>
+						<p>se ocupa la palabra reservada 'var' para incializar</p>
+						<p>Para darle un valor se usa el signo '=' y el valor a la derecha del signo, se le asigna</p>
+						<script type="text/template">
+							```
+							var <nombreVariable> = <valorVariable>
+							```
+						</script>
+					</section>
+					<section>
+						<h3>Uso de methodos según tipo de dato</h3>
+						<p>string: substring, length</p>
+					</section>
+					<section data-markdown>
+						<h3>modificación de variables</h3>
+						<p>SIN USAR 'var'</p>
+						<script type="text/template">
+							```
+							<nombreVariable> = <valorVariable>
+							<numero>++ //suma 1 al valor
+							<numero>-- //resta 1 al valor
+							```
+						</script>
+					</section>
+					<section data-markdown>
+						<h5>Asignación del valor de la variable utilizando prompt</h5>
+						<script type="text/template">
+							```
+							<nombreVariable> = prompt('mensaje')
+							```
+						</script>
+					</section>
+				</section>
+				<section>
+					<section>FUNCIONES</section>
+					<section>Código reutilizable</section>
+					<section data-markdown>
+						<h4>Sintaxis de definición: nombre, parametros, bloque de código</h4>
+						<script type="text/template">
+							```
+							var  nombreDeFunción = function (letras,parametros,numeros,etc) {
+								//CodigoReutilisable
+								return //lo que regresa la función
+							}
+							```
+						</script>
+					</section>
+					<section data-markdown>
+						Llamado de función con parametros
+						<script type="text/template">
+							```
+							  nombreDeFunción("dfkjshdfh", 12345, false)
+
+							```
+						</script>
+					</section>
+				</section>
+				<section>
+					<section><h2>CICLOS</h2></section>
+					<section>
+						<h3>For</h3>
+						<div data-markdown>
+							<script type="text/template">
+								```
+								for (inicializacion-de-contador; condicion-de-salida; accion-final-ciclo) {
+									// Serie de instrucciones
+								}
+								```
+							</script>
+						</div>
+					</section>
+					<section>
+						<h4>Repetir acción 'n' veces</h4>
+						<div data-markdown>
+							<script type="text/template">
+								```
+								for (var i=0; i<n; i++) {
+									// Serie de instrucciones
+								}
+								```
+							</script>
+						</div>
+					</section>
+					<section>
+						<h3>While</h3>
+						<div data-markdown>
+							<script type="text/template">
+								```
+								while (condicion) {
+									// Serie de instrucciones
+								}
+								```
+							</script>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section><h2>JSON</h2></section>
+					<seciton><h4>Significa JavaScipt Object Notation</h4></seciton>
+					<section>
+						<h4>Sintaxis</h4>
+						<div data-markdown>
+							<script type="text/template">
+								```js
+								let objetoVacio = {}
+								// se utilizan ','s para dividir entre campo-valor y otro campo-valor
+								let objeto = {
+									"nombreDeCampo": "valorDeCampo", // en inglés field y value
+									campoNumérico: 420, // las comillas en el nombre son opcionales salvo que tengan guiones o espacios
+									campoConArreglo: ["a", "b", "c"] //
+								}
+								//
+								```
+							</script>
+						</div>
+					</section>
+					<section>
+						<h4>Sintaxis</h4>
+						<div data-markdown>
+							<script type="text/template">
+								```js
+								// para accesar y modificar los campos se utiliza
+								// el nombre de la variable con un '.' y el nombre del campo a accesar
+								console.log(objeto.nombreDeCampo) // "valorDeCampo"
+								// también se puede utilizar, similar a los arreglos, '["nombreDeCampo"]'
+								console.log(objeto["campoNumerico"]) // 420
+								// y para modificarlo
+								objecto.campoNumerico = 666
+								console.log(objeto["campoNumerico"]) // 420
+								```
+							</script>
+						</div>
+					</section>
+					<section>
+						<h4>Sintaxis</h4>
+						<div data-markdown>
+							<script type="text/template">
+								```js
+								// para accesar y modificar los campos se utiliza
+								// el nombre de la variable con un '.' y el nombre del campo a accesar
+								let objeto = {
+									prop1: 1, prop2: "a",
+									subobjeto: {
+										subprop1: 2, subprop2: "b"
+										subsubobjeto: {
+											subsubprop1: 3,
+											subsubprop2: "c"
+										}
+									}
+								}
+								//
+								```
+							</script>
+						</div>
+					</section>
+					<section>
+						<h5>Recursos</h5>
+						<a href="https://www.w3schools.com/js/js_json_syntax.asp">W3: JSON Syntax</a>
+						<a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/JSON">Mozilla: JSON</a>
+					</section>
+				</section>
+				<section>
+					<section><h2>Events</h2></section>
+					<section>
+						<p>JavaScipt es un lenguage conducido por eventos (Event driven)</p>
+						<p>Podemos escuchar o subscribirnos a algunos para realizar ciertas operaciones</p>
+						<table style="font-size: 0.5em;">
+							<th>
+								<td>Events</td>
+								<td>Descipción</td>
+							</th>
+							<tr><td>onchange</td><td> 	Un elemento HTML ha cambiado</td></tr>
+							<tr><td>onclick</td><td> 	El usuario hace click en un elemento HTML</td></tr>
+							<tr><td>onmouseover</td><td> 	El usuario pasa el puntero encima en un elemento HTML</td></tr>
+							<tr><td>onmouseout</td><td> 	El usuario deja de pasar por encima de un elemento HTML</td></tr>
+							<tr><td>onkeydown</td><td> El usuario presiona una tecla</td></tr>
+							<tr><td>onload</td><td> El navegador ha terminado de cargar la página</td></tr>
+						</table>
+					</section>
+					<section>
+						<p>Hay varias maneras de subcribirse a estos eventos</p>
+						<div data-markdown>
+							<script type="text/template">
+								```html
+								<div onclick="heSidoClickeado()">...</div>
+								```
+							</script>
+						</div>
+						<div data-markdown>
+							<script type="text/template">
+								```js
+								let element = document.getElementById("myElemento")
+								element.onclick = function() { ... } // miFuncion ... sin parentesis
+								```
+							</script>
+						</div>
+						<div data-markdown>
+							<script type="text/template">
+								```js
+								let element = document.getElementById("myElemento")
+								element.addEventListener('click', function() { ... })
+								```
+							</script>
+						</div>
+					</section>
+					<section>
+						<h3>Document Events</h3>
+					</section>
+					<section>
+						<h4>DOM Loaded</h4>
+						<div data-markdown="">
+							<script type="text/template">
+								```js
+								document.addEventListener("DOMContentLoaded", function () {
+									// El codigo aquí se ejecutará hasta 
+									// que todo el DOM esté cargado
+								})
+								```
+							</script>
+						</div>
+					</section>
+					<section>
+						<h4>Tecla presionada</h4>
+						<div data-markdown="">
+							<script type="text/template">
+								```js
+								document.addEventListener("keyDown", function (event) {
+									let teclaPresionada = event.code //
+									// teclaPresionada = "KeyA", "KeyB" o "Digit9" o "ArrowDown"
+								})
+								```
+							</script>
+						</div>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@3.7.0/lib/js/head.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@3.7.0/js/reveal.min.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				transition: 'zoom',
+				dependencies: [
+					{ src: '../bower_components/reveal.js/plugin/markdown/marked.js' },
+					{ src: '../bower_components/reveal.js/plugin/markdown/markdown.js' },
+					{ src: '../bower_components/reveal.js/plugin/notes/notes.js', async: true },
+					{ src: '../bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
