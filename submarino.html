@@ -11,13 +11,28 @@
       width: 95px;
       text-align: center;
     }
+
+    .parpadea {
+      color: red;
+      animation-name: parpadea;
+      animation-duration: 0.5s;
+      animation-iteration-count: infinite; 
+    }
+
+    @keyframes parpadea {
+      from {opacity: 1;}
+      to {opacity: 0.1;}
+    }
   </style>
 </head>
 <body>
   <div>
     <div>y: <input id="y-input" type="text"></div>
     <div>x: <input id="x-input" type="text"></div>
-    <div><button>Tira</button></div>
+    <div>
+        <button onclick="tiraInputs()">Tira</button>
+        <span id="error" class="cls1 cls2"></span>
+    </div>
   </div>
   <br>
   <br>

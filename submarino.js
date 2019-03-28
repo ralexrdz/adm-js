@@ -18,11 +18,16 @@ function tira (y, x) {
   console.log ('y: ' + y)
   console.log('x: ' + x)
   if (x < 0 || x >= 6 || y < 0 || y >= 6) {
-    console.log('ni al mapa le atinaste', y, x)
+    // console.log('ni al mapa le atinaste', y, x)
+    let spanError = document.getElementById('error')
+    spanError.innerHTML = 'ni al mapa le atinaste'
+    setTimeout(function () {
+      spanError('error').innerHTML = ''
+    }, 3000)
   } else {
 
-    var id = 'celda-' + y + '-' + x  
-    console.log('id: ' + id )
+    var id = 'celda-' + y + '-' + x   
+    console.log('id: ' + id ) // celda-0-1
     document.getElementById(id).innerHTML = mapa[y][x]
 
     if (mapa[y][x] != '-') {
@@ -33,6 +38,15 @@ function tira (y, x) {
     }
   }
 }
+
+function tiraInputs () {
+  var yValue = document.getElementById('y-input').value
+  var xValue = document.getElementById('x-input').value
+  console.log('y: ' + yValue) // num
+  console.log('x: ' + xValue)
+
+  tira(yValue, xValue)
+} 
 
 // tira(0,-1) // ni al mapa
 // console.log(mapa)
